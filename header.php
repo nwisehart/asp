@@ -24,10 +24,23 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php   
+    global $post;
+    $postid = $post->ID;
+    $meta_key = 'featured_video_uploading';
+    $meta_value = get_post_meta($postid, $meta_key, true);
+    $image = false;
+    $header_class = (is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header');
+    if( $media = wp_get_attachment_url($meta_value)) {  // getting video here
+        $image = '<video id="headerVideo" autoplay="" loop="" muted="" playsinline="" data-object-fit="" src="'.$media.'" style="max-width:100%;display:block;"></video>' .
+                '<button id="pause">Pause</button>';
+        $header_class .= ' featured-video';
+    } 
+?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
 
-		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
+		<header id="masthead" class="<?php echo $header_class; ?>">
 
 			<div class="site-branding-container">
 				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
@@ -35,8 +48,8 @@
 
 			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
 				<div class="site-featured-image">
-					<?php
-						twentynineteen_post_thumbnail();
+                    <?php
+                        echo ($image ? $image : twentynineteen_post_thumbnail());
 						the_post();
 						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
 

@@ -42,3 +42,50 @@
     display: block;
     z-index: 10;
 }
+
+.site-header.featured-image.featured-video {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 2px;
+}
+
+.site-header.featured-image.featured-video .site-featured-image {
+    position: relative;
+}
+
+.site-header.featured-image.featured-video .entry-header {
+    position: absolute;
+    bottom: 15%;
+}
+
+.site-header.featured-image.featured-video .site-featured-image #pause {
+    position: absolute;
+    display: block;
+    text-indent: -999px;
+    overflow-x: hidden;
+    width: 45px;
+    height: 45px;
+    right: 20px;
+    top: 20px;
+    border: none;
+    background: url(../assets/img/pause.svg) no-repeat 0 0 transparent;
+    z-index: 10;
+    transition: none;
+}
+.site-header.featured-image.featured-video .site-featured-image #pause:hover, 
+.site-header.featured-image.featured-video .site-featured-image #pause:focus {
+    background-position-x: -47px;
+}
+
+.site-header.featured-image.featured-video.paused .site-featured-image #pause {
+    background-position-y: -49px;
+}
+
+.site-header.featured-image .site-branding-container,
+.site-header.featured-image .site-featured-image {
+    box-shadow: 0 2px var(--uw-gold-dark);
+}
+
+.site-header.featured-image .site-featured-image {
+    z-index: 6;
+}
