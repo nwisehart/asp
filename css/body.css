@@ -1,0 +1,71 @@
+.entry .entry-content > * {
+    max-width: none;
+}
+
+.content-area h2 {
+    color: var(--uw-gold);
+    font-size: 30px;
+}
+
+.content-area .has-text-align-center {
+    text-align: center;
+    max-width: none;
+}
+
+.content-area h2:before,
+.content-area h2:after {
+    background: var(--uw-gold);
+    content: "\020";
+    display: block;
+    height: 0.3rem;
+    width: 10em;
+    margin: 1rem 0;
+}
+
+.content-area h2:before {
+    content: none;
+}
+
+.content-area h2.has-text-align-right:after {
+    margin: 1rem 0 1rem auto;
+}
+
+.content-area h2.has-text-align-center:before,
+.content-area h2.has-text-align-center:after {
+    content: "\020";
+    margin: 1rem auto;
+}
+
+.content-area .wp-block-cover {
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+}
+
+.content-area .wp-block-cover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    left: 53%;
+    width: 1px;
+    height: 65%;
+    min-height: unset;
+    -webkit-transform: skew(-15deg, 0);
+    -ms-transform: skewX(-15deg) skewY(0);
+    transform: skew(-15deg, 0);
+    background-color: var(--uw-white);
+    display: block;
+    z-index: 1;
+}
+
+.content-area .wp-block-cover h2:after {
+    background: var(--uw-white);
+} 
+
+.content-area .wp-block-cover .wp-block-media-text__media img,  
+.content-area .wp-block-cover .wp-block-media-text__media video {
+    width: 80%;
+    float: right;
+}
+
