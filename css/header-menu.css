@@ -1,0 +1,200 @@
+.site-logo {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+  }
+
+  .site-logo .custom-logo-link {
+      width: var(--logo-width);
+      height: var(--header-height);
+      border-radius: 0;
+      background: var(--uw-purple);
+  }
+
+  .site-header-nav {
+      margin: 0;
+      vertical-align: top;
+      float: right;
+      width: calc(100% - var(--logo-width));
+      /* full width minus margin and logo width */
+  }
+
+  .site-header-nav nav {
+    padding: 0 2em;
+    margin: 0;
+  }
+
+  .site-branding {
+      margin: 0;
+      height: var(--header-height);
+  }
+
+  .main-navigation {
+      height: var(--dropdown-nav-height);
+      line-height: var(--dropdown-nav-height);
+      background: var(--uw-gold);
+      text-align: right;
+  }
+
+  .main-navigation.donate {
+      height: var(--donate-nav-height);
+      line-height: var(--donate-nav-height);
+      background: var(--uw-purple);
+      text-align: left;
+      /* ADD DONATE BTN */
+  }
+ 
+  .donate-menu,
+  .donate-button-menu {
+      list-style: none;
+      padding: 0;
+  }
+
+  .donate-menu li,
+  .donate-button-menu li {
+      display: inline-block;
+      margin-right: 1em;
+  }
+
+  .main-navigation .donate-menu .menu-item:hover, 
+  .main-navigation .donate-menu .menu-item:focus,
+  .main-navigation .donate-menu .menu-item:hover > a, 
+  .main-navigation .donate-menu .menu-item:focus > a {
+    color: var(--uw-gold);
+  }
+
+  .main-menu li {
+      margin-left: 15px;
+  }
+
+  .main-menu > li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 6px;
+    width: 1px;
+    height: 45px;
+    -webkit-transform: skew(-15deg, 0);
+    -ms-transform: skewX(-15deg) skewY(0);
+    transform: skew(-15deg, 0);
+    background-color: white;
+  }
+
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within > .sub-menu,
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):hover > .sub-menu, 
+  .main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus > .sub-menu, 
+  .main-navigation .main-menu .menu-item-has-children.is-focused:not(.off-canvas) > .sub-menu {
+      left: auto;
+      right: 0;
+      top: 44px;
+      min-width: 260px;
+  }   
+
+  .main-navigation .main-menu .menu-item:hover, 
+  .main-navigation .main-menu .menu-item:focus,
+  .main-navigation .main-menu .menu-item:hover > a, 
+  .main-navigation .main-menu .menu-item:focus > a {
+    color: var(--uw-purple);
+  }
+
+  .main-navigation .sub-menu {
+    background-color: var(--uw-white);
+    color: var(--uw-gray-dark);
+    min-width: 260px;
+    border: 0;
+    border-top: 4px solid var(--uw-purple);
+    padding: 10px 0;
+    margin: -1px 0 0;
+    overflow: visible;
+    -webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+}
+
+/* For hover between menu and dropdown */
+.main-navigation .sub-menu:before {
+    content: " ";
+    position: absolute;
+    top: -44px;
+    bottom: 100%;
+    right: 0;
+    left: 0;
+}
+
+.site-header.featured-image .main-navigation .sub-menu a {
+    color: var(--uw-gray-menu);
+}
+
+.main-navigation .sub-menu > li:not(:last-child) {
+    border-bottom: thin solid #eee;
+}
+
+.main-navigation .sub-menu > li > a {
+    font-family: "Encode Sans Compressed",sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-top: 4px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.site-header.featured-image .main-navigation .sub-menu > li > a:hover, 
+.site-header.featured-image .main-navigation .sub-menu > li > a:focus, 
+.site-header.featured-image .main-navigation .sub-menu > li > .menu-item-link-return:hover, 
+.site-header.featured-image .main-navigation .sub-menu > li > .menu-item-link-return:focus {
+    background: var(--uw-gray);
+    color: var(--uw-purple);
+}
+
+.menu-donate-button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* .menu-donate-button-container > ul {
+    list-style: none;
+} */
+
+.main-navigation .donate-button-menu .menu-item:hover, 
+.main-navigation .donate-button-menu .menu-item:focus,
+.main-navigation .donate-button-menu .menu-item:hover > a, 
+.main-navigation .donate-button-menu .menu-item:focus > a {
+    color: var(--uw-purple);
+}
+
+.main-navigation .donate-button {
+    height: 35px;
+    line-height: 35px;
+    min-width: 100px;
+    padding: 0 1em;
+    text-align: center;
+    background: var(--uw-gold);
+    color: var(--uw-white);
+    border: 1px solid var(--uw-gold-dark);
+    border-radius: 0;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+.site-header.featured-image .main-navigation .donate-button-menu a:hover, 
+.site-header.featured-image .main-navigation .donate-button-menu a:focus {
+    color: var(--uw-purple);
+    opacity: 1;
+} 
+
+.site-header.featured-image .main-navigation .donate-button-menu a:hover .donate-button, 
+.site-header.featured-image .main-navigation .donate-button-menu a:focus .donate-button {
+    background: var(--uw-gold);
+    color: var(--uw-purple);
+}
