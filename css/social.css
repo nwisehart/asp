@@ -1,0 +1,11 @@
+
+ul.social-menu > li > a {
+    background-color: var(--uw-gray-menu);
+    border-radius: 5%;
+}
+
+ul.social-menu > li > a > svg {
+    fill: var(--uw-white);
+    height: 30px;
+    width: 30px;
+}

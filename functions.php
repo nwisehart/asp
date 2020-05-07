@@ -4,6 +4,8 @@ add_action( 'wp_enqueue_scripts', 'asp_enqueue_scripts' );
 add_action( 'init', 'register_donate_menu' );
 add_action( 'init', 'register_donate_button' );
 add_action( 'init', 'asp_theme_support', 11 );
+add_action( 'init', 'asp_custom_post_type');
+add_action( 'wp_print_styles', 'asp_remove_inline_styles' );
 
 function asp_enqueue_parent_styles() {
    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
@@ -23,20 +25,29 @@ function register_donate_button() {
 
 function asp_theme_support() {
    unregister_nav_menu( 'expanded' );
+   unregister_nav_menu( 'footer' );
+}
+
+function asp_remove_inline_styles() {
+    // Remove previous inline style output of TwentyTwenty Customizer settings
+    wp_style_is( 'twentytwenty-style', 'enqueued' ) 
+    && wp_style_add_data( 'twentytwenty-style', 'after', '' );
 }
 
 
 /**
  * Add all required files
  */
-require get_stylesheet_directory() . '/inc/template-tags.php';
+
+define('ASP_FOLDER_PATH', trailingslashit(get_stylesheet_directory(__FILE__)));
+
+require_once (ASP_FOLDER_PATH . 'inc/widgets/class.social-icons.php');
+require (ASP_FOLDER_PATH . '/inc/template-tags.php');
 
 
 /**
  * Add custom post types 
  */
-
-add_action('init', 'asp_custom_post_type');
 
 function asp_custom_post_type() {
    register_post_type('asp_publications',

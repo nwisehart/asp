@@ -1,0 +1,84 @@
+#site-footer {
+    height: 200px;          
+    padding: 0;
+    position: relative;
+    background-image: url(../assets/img/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#site-footer .section-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+#site-footer .section-inner > div > a {
+    display: block;
+}
+
+.uw-wordmark > a {
+    -webkit-transition: none;
+    transition: none;
+    width: 335px;
+    background: url(../assets/sprites/uw-sprite.svg) no-repeat 0 -434px transparent;
+    text-indent: -99999px;
+    overflow: hidden;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+}
+
+.uw-wordmark > a:hover,
+.uw-wordmark > a:focus,
+.uw-wordmark > a.focus {
+    background: url(../assets/sprites/uw-sprite-focus.svg) no-repeat 0 -434px transparent;
+}
+
+.boundless-gold > a {
+    height: 65px;
+    width: 300px;
+    margin-top: 40px;
+    background: url(../assets/sprites/campaign-gold.svg) no-repeat center top transparent;
+    display: block;
+    text-indent: -99999px;
+    opacity: 1;
+    -o-transition: opacity .25s;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transform-origin: bottom center;
+    transform-origin: bottom center;
+}
+
+.boundless-gold > a:hover,
+.boundless-gold > a:focus,
+.boundless-gold > a.focus {
+    opacity: .6;
+}
+
+
+/**
+ * Mobile Styling
+ */
+
+ @media (max-width: 1000px) {
+
+    .boundless-gold {
+        display: none;
+    }
+
+    .uw-wordmark > a {
+        margin-bottom: 25px;
+    }
+
+    #site-footer {
+        height: 100px;
+    }
+
+ }

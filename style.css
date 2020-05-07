@@ -16,6 +16,9 @@ Text Domain: asp
 @import "./css/header-menu.css";
 @import "./css/header.css";
 @import "./css/body.css";
+@import "./css/footer.css";
+@import "./css/footer-menu-widgets.css";
+@import "./css/social.css";
 
 
   
