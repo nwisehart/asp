@@ -1,0 +1,66 @@
+.asp-footer-wrapper {
+    position: relative;
+    border-top: black 5px solid;
+    border-bottom: var(--uw-white) 15px solid;
+    padding: 5rem 0;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/img/footer-donate.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.asp-footer-wrapper:after {
+    content: '';
+    height: 70%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom center;
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.asp-footer-wrapper .widget {
+    width: 80%;
+    margin: 0 0 0 auto;
+}
+
+.asp-footer-wrapper .widget_text h2.widget-title {
+    display: inline-block; 
+    letter-spacing: 0.4rem;
+    margin-bottom: 0;
+    border-bottom: white 5px solid;
+}
+
+.asp-footer-wrapper .column-one .widget_text .textwidget {
+    border: var(--uw-white) 4px solid;
+    background: rgba(40,40,40,0.6);
+    padding: 2rem 3rem;
+}
+
+.asp-footer-wrapper .column-one .widget_text .textwidget > p {
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.asp-footer-wrapper .column-two .widget_text,
+.asp-footer-wrapper .column-two .widget_text .widget-content,
+.asp-footer-wrapper .column-two .widget_text .textwidget {
+    height: 100%;
+}
+
+.asp-footer-wrapper .column-two .widget_text {
+    margin: auto;
+}
+
+.asp-footer-wrapper .column-two .widget_text .textwidget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

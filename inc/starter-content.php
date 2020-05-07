@@ -60,7 +60,23 @@ function asp_get_starter_content() {
                         </ul>'
                     )
                 ),
-			),
+            ),
+            'sidebar-donate-1' => array(
+                'text_about' => array(
+                    'text', array(
+                        'title' => 'Get Involved',
+                        'text' => '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In massa felis, lacinia vitae condimentum eget, tristique vel est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur interdum dolor a nunc finibus vestibulum. Integer vel mi posuere, elementum nisl et, fermentum justo. Cras mattis metus ac dolor vulputate.</p>'
+                    )
+                ),
+            ),
+            'sidebar-donate-2' => array(
+                'text' => array(
+                    'text', array(
+                        'title' => '',
+                        'text' => '<div class="boundless-button sm dark give"><span><a id="immersive-give" data-fund="" data-appeal="" href="#">Donate</a></span></div>'
+                    )
+                ),
+            )
 		),
 
 		// Set up nav menus for each of the two areas registered in the theme.

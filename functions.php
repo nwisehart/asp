@@ -6,6 +6,7 @@ add_action( 'init', 'register_donate_button' );
 add_action( 'init', 'asp_theme_support', 11 );
 add_action( 'init', 'asp_custom_post_type');
 add_action( 'wp_print_styles', 'asp_remove_inline_styles' );
+add_action( 'widgets_init', 'asp_sidebar_registration' );
 
 function asp_enqueue_parent_styles() {
    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
@@ -34,7 +35,6 @@ function asp_remove_inline_styles() {
     && wp_style_add_data( 'twentytwenty-style', 'after', '' );
 }
 
-
 /**
  * Add all required files
  */
@@ -42,7 +42,9 @@ function asp_remove_inline_styles() {
 define('ASP_FOLDER_PATH', trailingslashit(get_stylesheet_directory(__FILE__)));
 
 require_once (ASP_FOLDER_PATH . 'inc/widgets/class.social-icons.php');
+require_once (ASP_FOLDER_PATH . 'inc/widgets/class.widget-areas.php');
 require (ASP_FOLDER_PATH . '/inc/template-tags.php');
+
 
 
 /**

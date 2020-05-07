@@ -12,6 +12,18 @@ if ( $has_sidebar_1 || $has_sidebar_2 ) {
 	?>
 
 	<div class="footer-nav-widgets-wrapper header-footer-group">
+        <div class="asp-footer-wrapper">    
+            <div class="asp-footer-inner section-inner">
+                <div class="footer-widgets-wrapper">
+                    <div class="footer-widgets column-one grid-item">
+                        <?php dynamic_sidebar( 'sidebar-donate-1' ); ?>
+                    </div>
+                    <div class="footer-widgets column-two grid-item">
+                        <?php dynamic_sidebar( 'sidebar-donate-2' ); ?>
+                    </div>
+                </div> 
+            </div>
+        </div>
 
 		<div class="footer-inner section-inner">
 
