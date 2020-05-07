@@ -9,3 +9,10 @@ ul.social-menu > li > a > svg {
     height: 30px;
     width: 30px;
 }
+
+@media (max-width: 1000px) { 
+    ul.social-menu > li > a > svg {
+        height: 24px;
+        width: 24px;
+    }
+}

@@ -49,3 +49,30 @@
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
+
+@media (max-width: 1000px) {
+    .boundless-button:after {
+        content: none;
+    }
+    
+    .boundless-button > span {
+        border: 2px solid var(--uw-white);
+        display: block;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        overflow: visible;
+        margin-left: 0;
+    }
+    
+    .boundless-button > span > a {
+        padding: 1rem 3rem;
+        font-family: "Encode Sans Compressed",sans-serif;
+        font-weight: 800;
+        font-size: 14px;
+        letter-spacing: 2px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}

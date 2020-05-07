@@ -64,3 +64,37 @@
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 1000px) { 
+    .asp-footer-wrapper:after {
+        content: none;
+    }
+    .asp-footer-wrapper .widget {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .asp-footer-wrapper .column-one .widget {
+        border: var(--uw-white) 3px solid;
+        background: rgba(40,40,40,0.6);
+        padding: 2rem;
+    }
+    .asp-footer-wrapper .widget_text h2.widget-title {
+        display: block; 
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+        border-bottom: none;
+    }
+    .asp-footer-wrapper .column-one .widget_text .textwidget {
+        border: none;
+        background:  none;
+        padding: 0;
+    }
+    .asp-footer-wrapper .column-one .widget_text .textwidget > p {
+        line-height: 1.7;
+        font-size: 14px;
+    }
+    .footer-nav-widgets-wrapper .asp-footer-wrapper .footer-widgets.column-two .widget:not(.widget_media_image) {
+        display: inherit;
+    }
+}
