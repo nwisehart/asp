@@ -11,6 +11,7 @@ Text Domain: asp
 @import "./css/fonts.css";
 @import "./css/variables.css";
 @import "./css/general.css";
+@import "./css/icon-font.css";
 
 /* Custom ASP Theme CSS */
 @import "./css/header-menu.css";
@@ -21,6 +22,7 @@ Text Domain: asp
 @import "./css/social.css";
 @import "./css/footer-donate.css";
 @import "./css/button-boundless.css";
+@import "./css/featured-entry-header.css";
 
 
   

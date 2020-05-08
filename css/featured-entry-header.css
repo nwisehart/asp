@@ -1,0 +1,105 @@
+.singular header.asp-cover-hero {
+    padding: 0;
+}
+
+header.asp-cover-hero > .wp-block-cover {
+    margin-top: 0;
+    height: 55vw;
+    min-height: 300px;
+}
+
+#aspMasthead.paused #aspHeroVideo {
+    filter: blur(2px);
+}
+
+#aspPlayPause {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    padding: 15px 20px;
+    z-index: 1;
+    background: transparent;
+    font-weight: 100;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+#aspPlayPause > span {
+    font-family: 'uw-icon';
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#aspPlayPause:hover, 
+#aspPlayPause:focus, 
+#aspPlayPause.focus {
+    border: rgba(183,165,121,0.6) 2px solid; 
+    text-decoration: unset;
+    color: var(--uw-gold-dark);
+}
+
+#aspPlayPause:hover > span:before, 
+#aspPlayPause:focus > span:before, 
+#aspPlayPause.focus > span:before {
+    color: var(--uw-gold-dark);
+}
+
+#aspMasthead h1.entry-title {
+    width: auto;
+    position: absolute;
+    bottom: 5rem;
+    right: 7rem;
+    display: inline-block;
+    padding: 2rem 3rem;
+    border: var(--uw-white) 3px solid;
+    background: rgba(40,40,40,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#aspMasthead h1.entry-title:before {
+    content: "";
+    height: 3px;
+    width: 5em;
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -3px;
+    background-color: var(--uw-white);
+}
+
+@media (max-width: 1000px) {
+    #aspPlayPause,
+    #aspHeroVideo {
+        display: none;
+    }
+
+    .singular header.asp-cover-hero {
+        border-top: 5px solid white;
+    }
+
+    header.asp-cover-hero .wp-block-cover__inner-container {
+        text-align: left;
+    }
+
+    #aspMasthead h1.entry-title {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 2rem 3rem;
+        border: var(--uw-white) 3px solid;
+        letter-spacing: 2px;
+        font-size: 28px;
+    }
+    
+    #aspMasthead h1.entry-title:before {
+        height: 3px;
+        width: 5em;
+        top: -6px;
+        left: -3px;
+    }
+
+}
+

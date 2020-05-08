@@ -1,5 +1,10 @@
 function handlePauseBtn(e) {
-    $("#masthead").toggleClass("paused");
-    $("#masthead").hasClass("paused") ? $('#headerVideo').get(0).pause() : $('#headerVideo').get(0).play();
+    //pause video
+    $("#aspMasthead").toggleClass("paused");
+    $("#aspMasthead").hasClass("paused") ? $('#aspHeroVideo').get(0).pause() : $('#aspHeroVideo').get(0).play();
+    
+    //toggle button
+    $("#aspMasthead").hasClass("paused") ? $("#aspPlayPause").html('<span class="ic-play sm white"></span>Play') : $("#aspPlayPause").html('<span class="ic-pause sm white"></span>Pause');
 }
-$("#pause").on('click', this.handlePauseBtn);
+
+$("#aspPlayPause").on('click', this.handlePauseBtn);

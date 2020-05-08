@@ -9,8 +9,11 @@
     --uw-gold-light: #e8e3d3;
     --uw-gold-dark: #85754d;
     --uw-gold-bright: #ffd800;
-    --dropdown-nav-height: 70px;
-    --donate-nav-height: 55px;
-    --header-height: calc(var(--dropdown-nav-height) + var(--donate-nav-height));
+    --dropdown-nav-height: 60px;
+    --dropdown-mobile-nav-height: 0;
+    --header-nav-height: 70px;
+    --header-mobile-nav-height: 60px;
+    --header-height: calc(var(--dropdown-nav-height) + var(--header-nav-height));
+    --header-mobile-height: calc(var(--dropdown-mobile-nav-height) + var(--header-mobile-nav-height));
     --logo-width: 125px;
   }
