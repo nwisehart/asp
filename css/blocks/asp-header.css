@@ -1,0 +1,81 @@
+.asp-header-container {
+    display: flex;
+    align-items: flex-end;
+}
+.asp-header-container.asp-color-purple {
+    color: var(--uw-purple);
+}
+.asp-header-container.asp-color-white {
+    color: var(--uw-white);
+} 
+.asp-header-container.asp-align-left {
+    text-align: left;
+    justify-content: flex-start;
+}
+.asp-header-container.asp-align-center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 80vw;
+}
+.asp-header-container.asp-align-right {
+    text-align: right;
+    justify-content: flex-end;
+}
+.asp-header-container h2.asp-header {
+    display: inline-block;
+    color: inherit;
+    margin: 3rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+.asp-header-container.asp-align-center h2.asp-header {
+    margin: 3rem;
+    white-space: nowrap;
+}
+.asp-header-container:before,
+.asp-header-container:after {
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color: var(--uw-gray);
+}
+.asp-header-container.asp-align-center.asp-color-purple:before,
+.asp-header-container.asp-align-center.asp-color-purple:after {
+    background-color: var(--uw-purple);
+}
+.asp-header-container.asp-align-center.asp-color-white:before,
+.asp-header-container.asp-align-center.asp-color-white:after {
+    background-color: var(--uw-white);
+}
+.asp-header-container.asp-align-left:after,
+.asp-header-container.asp-align-right:after  {
+    content: none;
+}
+.asp-header-container.asp-align-left:before,
+.asp-header-container.asp-align-right:before  {
+    position: absolute;
+    width: 20%;
+    height: 3px;
+}
+
+/**
+ * Mobile Styling
+ */
+
+ @media (max-width: 1000px) {
+    .asp-header-container h2.asp-header {
+        letter-spacing: unset;
+        margin: 2rem 0 1rem;
+    }
+    .asp-header-container.asp-align-left:before, 
+    .asp-header-container.asp-align-right:before {
+        width: 45%;
+    }
+    .asp-header-container.asp-align-center h2.asp-header {
+        margin: 2rem;
+    }
+    .asp-header-container.asp-align-center {
+        max-width: 90vw;
+    }
+ }

@@ -43,7 +43,8 @@ define('ASP_FOLDER_PATH', trailingslashit(get_stylesheet_directory(__FILE__)));
 
 require_once (ASP_FOLDER_PATH . 'inc/widgets/class.social-icons.php');
 require_once (ASP_FOLDER_PATH . 'inc/widgets/class.widget-areas.php');
-require (ASP_FOLDER_PATH . '/inc/template-tags.php');
+require_once (ASP_FOLDER_PATH . 'inc/editor-settings.php');
+require_once (ASP_FOLDER_PATH . 'inc/template-tags.php');
 
 
 
