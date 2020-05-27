@@ -32,6 +32,7 @@
 .asp-header-container.asp-align-center h2.asp-header {
     margin: 3rem;
     white-space: nowrap;
+    font-size: 28px;
 }
 .asp-header-container:before,
 .asp-header-container:after {

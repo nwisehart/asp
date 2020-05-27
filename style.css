@@ -23,10 +23,10 @@ Text Domain: asp
 @import "./css/footer-donate.css";
 @import "./css/button-boundless.css";
 @import "./css/featured-entry-header.css";
-@import "./css/headers.css";
 
 /* Custom Blocks */
 @import "./css/blocks/asp-header.css";
+@import "./css/blocks/asp-widget.css";
 
 
   
