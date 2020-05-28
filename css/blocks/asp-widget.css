@@ -7,6 +7,9 @@
     position: relative;
     background: var(--uw-white);
     color: var(--uw-black);
+    margin: 0 auto 3rem;
+}
+.entry-content .wp-block-columns .asp-widget-container {
     margin: 0 auto;
 }
 .entry-content > .asp-widget-container:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
@@ -115,17 +118,6 @@
 
 /* Mobile Styling */
 @media (max-width: 599px) {
-    .entry-content .wp-block-cover-image .wp-block-cover__inner-container, .wp-block-cover .wp-block-cover__inner-container {
-        width: 100%;
-    }
-    .entry-content .wp-block-column {
-        flex-basis: 100%!important;
-        margin-bottom: 0;
-    }
-    .entry-content .wp-block-cover {
-        background: white;
-        background-image: none !important;
-    }
     .asp-widget-container {
         max-width: none;
         border-left: none;

@@ -1,0 +1,77 @@
+.entry-content .wp-block-cover.alignfull {
+    margin: 0;
+    margin-top: -3px;
+    padding: 3rem 0;
+    border-width: 3px 0;
+    border-color: black;
+    border-style: solid;
+}
+
+.wp-block-cover.alignfull.asp-side-slash:after {
+    content: '';
+    height: 45%;
+    width: 1px;
+    background-color: rgba(255,255,255,0.8);
+    position: absolute;
+    top: -5%;
+    left: 0;
+    transform-origin: bottom left;
+    -webkit-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.wp-block-cover p.asp-shadow-box {
+    border: var(--uw-white) 3px solid;
+    background: rgba(50,50,50,0.8);
+    padding: 2rem 3rem;
+}
+
+.wp-block-cover figcaption,
+.wp-block-cover .wp-caption-text {
+    color: var(--uw-gray);
+}
+
+/* Mobile Styling */
+@media (max-width: 599px) {
+    .entry-content .wp-block-cover-image .wp-block-cover__inner-container, .wp-block-cover .wp-block-cover__inner-container {
+        width: 100%;
+    }
+    .entry-content .wp-block-column {
+        flex-basis: 100%!important;
+        margin-bottom: 0;
+    }
+    .entry-content .wp-block-cover {
+        background: white;
+        background-image: none !important;
+    }
+    .entry-content .wp-block-cover .asp-header-container.asp-color-white {
+        color: var(--uw-purple);
+    }
+    .entry-content .wp-block-cover .asp-header-container.asp-align-center.asp-color-white:before,
+    .entry-content .wp-block-cover .asp-header-container.asp-align-center.asp-color-white:after {
+        background-color: var(--uw-purple);
+    }
+    .entry-content .wp-block-cover.alignfull,
+    .entry-content .wp-block-cover.alignfull .wp-block-cover__inner-container {
+        padding-bottom: 0;
+    }
+    .entry-content .wp-block-cover.alignfull {
+        margin-top: 0;
+        border: none;
+    }
+    .entry-content .wp-block-cover figcaption,
+    .entry-content .wp-block-cover .wp-caption-text {
+        color: var(--uw-gray-dark);
+        margin: .5em 1em 1em;
+    }
+    .entry-content .wp-block-cover .wp-block-columns {
+        margin: 0;
+    }
+    .wp-block-cover p.asp-shadow-box {
+        border: none;
+        background: none;
+        padding: 0 2rem;
+        color: initial;
+    }
+}

@@ -96,6 +96,7 @@
 
 #site-header {
     background: var(--uw-purple);
+    z-index: 2;
 }
 
 .header-inner {

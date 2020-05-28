@@ -1,6 +1,7 @@
 .asp-header-container {
     display: flex;
     align-items: flex-end;
+    margin-bottom: 1rem;
 }
 .asp-header-container.asp-color-purple {
     color: var(--uw-purple);
@@ -28,11 +29,11 @@
     margin: 3rem 0 1rem;
     text-transform: uppercase;
     letter-spacing: 0;
+    font-size: 32px;
 }
 .asp-header-container.asp-align-center h2.asp-header {
     margin: 3rem;
     white-space: nowrap;
-    font-size: 28px;
 }
 .asp-header-container:before,
 .asp-header-container:after {
@@ -68,6 +69,7 @@
     .asp-header-container h2.asp-header {
         letter-spacing: unset;
         margin: 2rem 0 1rem;
+        font-size: 28px;
     }
     .asp-header-container.asp-align-left:before, 
     .asp-header-container.asp-align-right:before {
