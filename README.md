@@ -7,3 +7,6 @@
 ## Helpful Classes: 
 - "asp-shadow-box" applies a darkened background for p elements. Useful for elements inside of cover blocks.
 - "asp-side-slash" applies the decorative slash on the left side of a cover block.
+
+## Other
+Dry run test
