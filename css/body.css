@@ -116,3 +116,13 @@
     text-transform: uppercase;
 }
 
+.post-inner {
+    padding-top: 0;
+}
+
+@media (min-width: 700px) {
+    .post-inner {
+        padding-top: 0;
+    }
+}
+

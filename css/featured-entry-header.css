@@ -7,6 +7,7 @@ header.asp-cover-hero > .wp-block-cover {
     height: 55vw;
     min-height: 300px;
     max-height: calc(100vh - var(--header-height));
+    margin-bottom: 0;
 }
 
 #aspMasthead.paused #aspHeroVideo {
