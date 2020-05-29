@@ -125,7 +125,7 @@ function settings_field_page_for_facilities( $args ) {
  *
  * @param array $args
  */
-function settings_field_page_for_student( $args ) {
+function settings_field_page_for_students( $args ) {
     $id = 'page_for_students';
     wp_dropdown_pages( array(
         'name'              => $id,
