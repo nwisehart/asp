@@ -128,6 +128,10 @@ body:not(.singular) main > article:first-of-type.has-post-thumbnail {
     padding-top: 0;
 }
 
+.wp-block-group.alignwide [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    max-width: calc(100vw - 8rem);
+}
+
 @media (min-width: 700px) {
     .post-inner {
         padding-top: 0;
@@ -141,6 +145,8 @@ body:not(.singular) main > article:first-of-type.has-post-thumbnail {
         padding-top: 0;
     }
 
-
+    .wp-block-group.alignwide [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+        max-width: calc(100vw - 16rem);
+    }
 }
 
