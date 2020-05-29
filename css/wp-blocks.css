@@ -19,6 +19,7 @@
     -webkit-transform: rotate(15deg);
     -ms-transform: rotate(15deg);
     transform: rotate(15deg);
+    /* z-index: 1;    */
 }
 
 .wp-block-cover p.asp-shadow-box {

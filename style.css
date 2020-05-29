@@ -24,6 +24,7 @@ Text Domain: asp
 @import "./css/button-boundless.css";
 @import "./css/featured-entry-header.css";
 @import "./css/wp-blocks.css";
+@import "./css/wpg-maps.css";
 
 /* Custom Blocks */
 @import "./css/blocks/asp-header.css";

@@ -1,0 +1,5 @@
+.entry-content #wpgmza_map.alignfull,
+.entry-content .wpgmza_map.alignfull {
+    border-top: var(--uw-black) 3px solid;
+    border-bottom: var(--uw-black) 3px solid;
+}
