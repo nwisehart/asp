@@ -118,11 +118,29 @@
 
 .post-inner {
     padding-top: 0;
+} 
+
+.entry-content > *:not(.wp-block-cover):first-child {
+    padding-top: 5rem;
+} 
+
+body:not(.singular) main > article:first-of-type.has-post-thumbnail {
+    padding-top: 0;
 }
 
 @media (min-width: 700px) {
     .post-inner {
         padding-top: 0;
     }
+
+    .entry-content >*:not(.wp-block-cover):first-child {
+        padding-top: 8rem;
+    }
+
+    body:not(.singular) main > article:first-of-type.has-post-thumbnail {
+        padding-top: 0;
+    }
+
+
 }
 
