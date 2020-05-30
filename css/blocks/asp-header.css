@@ -23,15 +23,23 @@
     text-align: right;
     justify-content: flex-end;
 }
-.asp-header-container h2.asp-header {
+.asp-header-container .asp-header {
     display: inline-block;
     color: inherit;
     margin: 3rem 0 1rem;
     text-transform: uppercase;
     letter-spacing: 0;
+}
+.asp-header-container h2.asp-header {
     font-size: 32px;
 }
-.asp-header-container.asp-align-center h2.asp-header {
+.asp-header-container h3.asp-header {
+    font-size: 28px;
+}
+.asp-header-container h4.asp-header {
+    font-size: 24px;
+}
+.asp-header-container.asp-align-center .asp-header {
     margin: 3rem;
     white-space: nowrap;
 }
@@ -66,16 +74,24 @@
  */
 
  @media (max-width: 1000px) {
-    .asp-header-container h2.asp-header {
+    .asp-header-container .asp-header {
         letter-spacing: unset;
         margin: 2rem 0 1rem;
+    }
+    .asp-header-container h2.asp-header {
         font-size: 28px;
+    }
+    .asp-header-container h3.asp-header {
+        font-size: 24px;
+    }
+    .asp-header-container h4.asp-header {
+        font-size: 20px;
     }
     .asp-header-container.asp-align-left:before, 
     .asp-header-container.asp-align-right:before {
         width: 45%;
     }
-    .asp-header-container.asp-align-center h2.asp-header {
+    .asp-header-container.asp-align-center .asp-header {
         margin: 2rem;
     }
     .asp-header-container.asp-align-center {
