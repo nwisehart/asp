@@ -98,6 +98,32 @@
     padding-right: 0;
 }
 
+.asp-widget-container.no-text {
+    min-height: auto;
+}
+
+.asp-widget-container.no-text > div {
+    margin-bottom: 0;
+}
+
+.asp-widget-container.no-text p.asp-btn {
+    margin: 0 0 0 -2rem;
+    position: relative;
+}
+
+.asp-widget-container.no-text a.uw-btn {
+    border: none;
+    width: calc(100% - 38px + 2rem);
+}
+
+.asp-widget-container.no-text a.uw-btn:before {
+    border-width: 2px 0 2px 2px;
+}
+
+.asp-widget-container.no-text p:not(.asp-btn) {
+    display: none;
+}
+
 /* Break 4 down to 2 at 1000 */
 @media (max-width: 1000px) and (min-width: 781px) {
     .wp-block-columns {

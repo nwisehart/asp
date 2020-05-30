@@ -1,5 +1,7 @@
 <?php 
     $container_classes = 'asp-widget-container';
+    $text = block_field( 'text' , false );
+    $container_classes .= empty( $text ) ? " no-text" : "";
 ?>
 <div class="<?php echo $container_classes ?>">
 <div>
