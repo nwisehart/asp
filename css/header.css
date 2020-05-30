@@ -181,16 +181,19 @@
 }
 
 nav.primary-menu-wrapper {
-    height: var(--dropdown-nav-height);
+    min-height: var(--dropdown-nav-height);
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 ul.primary-menu {
-    margin: 0;
+    margin: 0 0 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    height: 100%;
+    height: var(--dropdown-nav-height);
 }
 
 .primary-menu li {
@@ -272,6 +275,55 @@ body:not(.overlay-header) .primary-menu > li > ul:after {
 .primary-menu ul > li.focus  {
     border-bottom: var(--uw-gray-dark) 2px solid;
 }
+
+ul.asp-callout-menu {
+    justify-content: flex-start;
+    margin: 0 auto 0 0;
+}
+
+ul.asp-callout-menu.is-front-page {
+    position: absolute;
+    top: calc(var(--header-height) + 2rem);
+    left: 2rem;
+    background: rgba(40,40,40,0.6);
+    border: var(--asp-callout-color) 2px solid;
+    padding: 0.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+}
+
+ul.asp-callout-menu.is-front-page > li {
+    width: 100%;
+}
+
+ul.asp-callout-menu.is-front-page > li:not(:first-child) {
+    margin: 0;
+}
+
+ul.asp-callout-menu.is-front-page > li:not(:first-child):before {
+    content: "";
+    position: absolute;
+    margin: 0 -2%;
+    height: 1px;
+    width: 104%;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    background-color: var(--uw-white);
+}
+
+ul.asp-callout-menu.is-front-page > li > a {
+    color: var(--uw-white);
+    line-height: 2.5;
+}
+
+
 
 /**
  * Mobile Styling

@@ -94,7 +94,7 @@
                     <div class="row-wrapper">
 
 					<?php
-					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) ) {
+					if ( has_nav_menu( 'primary' ) || ! has_nav_menu( 'expanded' ) || has_nav_menu( 'callout-menu' )) {
 						?>
 
 							<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
@@ -124,6 +124,23 @@
 									);
 
 								}
+								?>
+
+								</ul>
+								<ul class="primary-menu asp-callout-menu reset-list-style<?php echo is_front_page() ? " is-front-page" : "" ?>">
+
+								<?php
+								if ( has_nav_menu( 'callout-menu' ) ) {
+
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => '%3$s',
+											'theme_location' => 'callout-menu',
+										)
+									);
+
+								} 
 								?>
 
 								</ul>
