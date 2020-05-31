@@ -18,7 +18,7 @@ function asp_custom_post_type() {
             'publicly_queryable' => true,
             'exclude_from_search' => false,
             'query_var' => true,
-            'taxonomies' => array( 'post_tag', 'category'),
+            'taxonomies' => array( 'category'),
             'supports' => array(
                 'thumbnail',
                 'excerpt',
