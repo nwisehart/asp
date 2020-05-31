@@ -28,90 +28,17 @@ function asp_custom_post_type() {
             )
         )
     );
-    register_post_type('asp_faculty',
-       array(
-          'labels'      => array(
-             'name'          => __('Faculty', 'textdomain'),
-             'singular_name' => __('Faculty', 'textdomain'),
-          ),
-          'public'      => true,
-          'has_archive' => true,
-          'rewrite'     => array( 'slug' => 'faculty' ),
-          'supports' => array(
-                     'post-thumbnails',
-                     'excerpts',
-                     'comments',
-                     'revisions',
-                     'title',
-                     'editor',
-                     'page-attributes',
-                     'custom-fields'
-                  )
-
-       )
-    );
-    register_post_type('asp_students',
-       array(
-          'labels'      => array(
-             'name'          => __('Students and Alumni', 'textdomain'),
-             'singular_name' => __('Student', 'textdomain'),
-          ),
-          'public'      => true,
-          'has_archive' => true,
-          'rewrite'     => array( 'slug' => 'students' ),
-       )
-    );
 }
 
  /**
  * Adds a custom field: "post page"; on the "Settings > Reading" page.
  */
 function asp_add_static_post_pages() {
-    $id = 'page_for_faculty';
-    $idstudents = 'page_for_students';
     $idpublications = 'page_for_publications';
     // add_settings_field( $id, $title, $callback, $page, $section = 'default', $args = array() )
-    add_settings_field( $id, 'Faculty page:', 'settings_field_page_for_faculty', 'reading', 'default', array(
-        'label_for' => 'field-' . $id, // A unique ID for the field. Optional.
-        'class'     => 'row-' . $id,   // A unique class for the TR. Optional.
-    ) );
-    add_settings_field( $idstudents, 'Students page:', 'settings_field_page_for_students', 'reading', 'default', array(
-        'label_for' => 'field-' . $idstudents, // A unique ID for the field. Optional.
-        'class'     => 'row-' . $idstudents,   // A unique class for the TR. Optional.
-    ) );
     add_settings_field( $idpublications, 'Publications page:', 'settings_field_page_for_publications', 'reading', 'default', array(
         'label_for' => 'field-' . $idpublications, // A unique ID for the field. Optional.
         'class'     => 'row-' . $idpublications,   // A unique class for the TR. Optional.
-    ) );
-}
-
-/**
- * Renders the custom "Faculty page" field.
- *
- * @param array $args
- */
-function settings_field_page_for_faculty( $args ) {
-    $id = 'page_for_faculty';
-    wp_dropdown_pages( array(
-        'name'              => $id,
-        'show_option_none'  => '&mdash; Select &mdash;',
-        'option_none_value' => '0',
-        'selected'          => get_option( $id ),
-    ) );
-}
-
-/**
- * Renders the custom "Student page" field.
- *
- * @param array $args
- */
-function settings_field_page_for_students( $args ) {
-    $id = 'page_for_students';
-    wp_dropdown_pages( array(
-        'name'              => $id,
-        'show_option_none'  => '&mdash; Select &mdash;',
-        'option_none_value' => '0',
-        'selected'          => get_option( $id ),
     ) );
 }
 
@@ -137,8 +64,6 @@ function settings_field_page_for_publications( $args ) {
  * @param array $options
  */
 add_filter( 'whitelist_options', function ( $options ) {
-    $options['reading'][] = 'page_for_faculty';
-    $options['reading'][] = 'page_for_students';
     $options['reading'][] = 'page_for_publications';
     return $options;
 } );
@@ -151,12 +76,6 @@ add_filter( 'whitelist_options', function ( $options ) {
  * @param WP_Post $post
  */
 add_filter( 'display_post_states', function ( $states, $post ) {
-    if ( intval( get_option( 'page_for_faculty' ) ) === $post->ID ) {
-        $states['page_for_faculty'] = __( 'Faculty Page' );
-    }
-    if ( intval( get_option( 'page_for_students' ) ) === $post->ID ) {
-        $states['page_for_students'] = __( 'Students Page' );
-    }
     if ( intval( get_option( 'page_for_publications' ) ) === $post->ID ) {
         $states['page_for_publications'] = __( 'Publications Page' );
     }
