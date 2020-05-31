@@ -17,17 +17,6 @@ function asp_custom_post_type() {
             'rewrite'     => array( 'slug' => 'publications' ),
         )
     );
-    register_post_type('asp_facilities',
-       array(
-          'labels'      => array(
-             'name'          => __('Facilities', 'textdomain'),
-             'singular_name' => __('Facility', 'textdomain'),
-          ),
-          'public'      => true,
-          'has_archive' => true,
-          'rewrite'     => array( 'slug' => 'facilities' ),
-       )
-    );
     register_post_type('asp_faculty',
        array(
           'labels'      => array(
@@ -68,17 +57,12 @@ function asp_custom_post_type() {
  */
 function asp_add_static_post_pages() {
     $id = 'page_for_faculty';
-    $idfacilities = 'page_for_facilities';
     $idstudents = 'page_for_students';
     $idpublications = 'page_for_publications';
     // add_settings_field( $id, $title, $callback, $page, $section = 'default', $args = array() )
     add_settings_field( $id, 'Faculty page:', 'settings_field_page_for_faculty', 'reading', 'default', array(
         'label_for' => 'field-' . $id, // A unique ID for the field. Optional.
         'class'     => 'row-' . $id,   // A unique class for the TR. Optional.
-    ) );
-    add_settings_field( $idfacilities, 'Facilities page:', 'settings_field_page_for_facilities', 'reading', 'default', array(
-        'label_for' => 'field-' . $idfacilities, // A unique ID for the field. Optional.
-        'class'     => 'row-' . $idfacilities,   // A unique class for the TR. Optional.
     ) );
     add_settings_field( $idstudents, 'Students page:', 'settings_field_page_for_students', 'reading', 'default', array(
         'label_for' => 'field-' . $idstudents, // A unique ID for the field. Optional.
@@ -97,21 +81,6 @@ function asp_add_static_post_pages() {
  */
 function settings_field_page_for_faculty( $args ) {
     $id = 'page_for_faculty';
-    wp_dropdown_pages( array(
-        'name'              => $id,
-        'show_option_none'  => '&mdash; Select &mdash;',
-        'option_none_value' => '0',
-        'selected'          => get_option( $id ),
-    ) );
-}
-
-/**
- * Renders the custom "Facilities page" field.
- *
- * @param array $args
- */
-function settings_field_page_for_facilities( $args ) {
-    $id = 'page_for_facilities';
     wp_dropdown_pages( array(
         'name'              => $id,
         'show_option_none'  => '&mdash; Select &mdash;',
@@ -158,7 +127,6 @@ function settings_field_page_for_publications( $args ) {
  */
 add_filter( 'whitelist_options', function ( $options ) {
     $options['reading'][] = 'page_for_faculty';
-    $options['reading'][] = 'page_for_facilities';
     $options['reading'][] = 'page_for_students';
     $options['reading'][] = 'page_for_publications';
     return $options;
@@ -174,9 +142,6 @@ add_filter( 'whitelist_options', function ( $options ) {
 add_filter( 'display_post_states', function ( $states, $post ) {
     if ( intval( get_option( 'page_for_faculty' ) ) === $post->ID ) {
         $states['page_for_faculty'] = __( 'Faculty Page' );
-    }
-    if ( intval( get_option( 'page_for_facilities' ) ) === $post->ID ) {
-        $states['page_for_facilities'] = __( 'Facilities Page' );
     }
     if ( intval( get_option( 'page_for_students' ) ) === $post->ID ) {
         $states['page_for_students'] = __( 'Students Page' );

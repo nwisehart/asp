@@ -24,9 +24,6 @@ get_header();
     if (is_post_type_archive("asp_students")) {
         $pageId = intval( get_option( 'page_for_students' ) );
     }
-    if (is_post_type_archive("asp_facilities")) {
-        $pageId = intval( get_option( 'page_for_facilities' ) );
-    }
     if (is_post_type_archive("asp_publications")) {
         $pageId = intval( get_option( 'page_for_publications' ) );
     }
