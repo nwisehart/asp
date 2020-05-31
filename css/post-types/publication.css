@@ -1,0 +1,10 @@
+/* CSS for Publications single post */
+
+.asp_publications header.asp-cover-hero > .wp-block-cover {
+    max-height: calc(70vh - var(--header-height));
+}
+.asp_publications header .entry-categories, 
+.asp_publications header .post-meta-wrapper,
+.asp_publications .section-inner .post-meta-wrapper {
+    display: none;
+}

@@ -15,6 +15,17 @@ function asp_custom_post_type() {
             'public'      => true,
             'has_archive' => true,
             'rewrite'     => array( 'slug' => 'publications' ),
+            'publicly_queryable' => true,
+            'exclude_from_search' => false,
+            'query_var' => true,
+            'taxonomies' => array( 'post_tag', 'category'),
+            'supports' => array(
+                'thumbnail',
+                'excerpt',
+                'title',
+                'editor',
+                'custom-fields'
+            )
         )
     );
     register_post_type('asp_faculty',
