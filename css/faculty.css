@@ -32,6 +32,11 @@
         margin-right: 32px;
     }
 }
+@media (max-width: 599px) {
+    .asp-faculty-info table {
+        margin-bottom: 2rem;
+    }
+}
 
 /*
  * Faculty publications list
@@ -60,4 +65,14 @@
 .featured-publications.publication-title-only a.asp-publication-list-item.focus {
     color: var(--uw-gold);
     text-decoration: underline;
+}
+@media (max-width: 599px) {
+    .featured-publications.publication-title-only .asp-publication-container {
+        min-height: unset;
+        padding: 0.5rem 0;
+    }
+    .featured-publications.publication-title-only {
+        margin-bottom: 5rem;
+        width: 100%;
+    }
 }

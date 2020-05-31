@@ -99,6 +99,7 @@ header.asp-cover-hero > .wp-block-cover {
         text-align: left;
     }
 
+    #aspMasthead.asp-featured-image h1.entry-title,
     #aspMasthead h1.entry-title {
         position: relative;
         top: 0;
@@ -109,6 +110,7 @@ header.asp-cover-hero > .wp-block-cover {
         font-size: 28px;
     }
     
+    #aspMasthead.asp-featured-image h1.entry-title:before,
     #aspMasthead h1.entry-title:before {
         height: 3px;
         width: 5em;
