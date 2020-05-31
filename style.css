@@ -26,6 +26,7 @@ Text Domain: asp
 @import "./css/wp-blocks.css";
 @import "./css/wp-forms.css";
 @import "./css/wpg-maps.css";
+@import "./css/slider.css";
 
 /* Custom Blocks */
 @import "./css/blocks/asp-header.css";

@@ -1,0 +1,60 @@
+/*
+ * Overwrites Soliloquy Slider
+ */
+
+ .asp-slider.soliloquy-container {
+
+ }
+ .asp-slider img.soliloquy-image {
+     width: 100%;
+     height: auto;
+}
+.asp-slider li.soliloquy-item {  /* .soliloquy-active-slide */
+    max-height: 500px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+.asp-slider li.soliloquy-item.soliloquy-active-slide { 
+    /* display: flex !important; */
+}
+.asp-slider .soliloquy-controls a.soliloquy-prev,
+.asp-slider .soliloquy-controls a.soliloquy-next {
+    background: rgba(75,46,131,0.7);
+    height: 100%;   
+    top: 0;
+    margin-top: 0;
+    width: 3em;
+}
+.asp-slider .soliloquy-controls a.soliloquy-next {
+    right: 0;
+}
+.asp-slider .soliloquy-controls a.soliloquy-prev {
+    left: 0;
+}
+.asp-slider .soliloquy-controls a.soliloquy-prev span,
+.asp-slider .soliloquy-controls a.soliloquy-next span {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    /* right: -23px; */
+    top: 50%;
+    margin-top: -9px;
+    border: solid var(--uw-gray);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.asp-slider .soliloquy-controls a.soliloquy-next span {
+    right: 20px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.asp-slider .soliloquy-controls a.soliloquy-prev span{
+    left: 20px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
