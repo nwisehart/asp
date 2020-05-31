@@ -386,3 +386,133 @@ html {
   .entry-content .h6 {
     font-size: 19px;
   }
+  
+  /* 
+   * Text Colors
+   */
+  .has-uw-purple-color {
+    color: var(--uw-purple);
+  }
+  .has-uw-white-color {
+    color: var(--uw-white);
+  }
+  .has-uw-gray-color {
+    color: var(--uw-gray);
+  }
+  .has-uw-gray-dark-color {
+    color: var(--uw-gray-dark);
+  }
+  .has-uw-gray-menu-color {
+    color: var(--uw-gray-menu);
+  }
+  .has-uw-link-color {
+    color: var(--uw-link);
+  }
+  .has-uw-gold-color {
+    color: var(--uw-gold);
+  }
+  .has-uw-gold-light-color {
+    color: var(--uw-gold-light);
+  }
+  .has-uw-gold-dark-color {
+    color: var(--uw-gold-dark);
+  }
+  .has-uw-gold-bright-color {
+    color: var(--uw-gold-bright);
+  }
+  .has-uw-black-color {
+    color: var(--uw-black);
+  }
+
+  /* 
+   * Background Colors
+   */
+  .has-uw-purple-background-color {
+    background-color: var(--uw-purple);
+  }
+  .has-uw-white-background-color {
+    background-color: var(--uw-white);
+  }
+  .has-uw-gray-background-color {
+    background-color: var(--uw-gray);
+  }
+  .has-uw-gray-dark-background-color {
+    background-color: var(--uw-gray-dark);
+  }
+  .has-uw-gray-menu-background-color {
+    background-color: var(--uw-gray-menu);
+  }
+  .has-uw-link-background-color {
+    background-color: var(--uw-link);
+  }
+  .has-uw-gold-background-color {
+    background-color: var(--uw-gold);
+  }
+  .has-uw-gold-light-background-color {
+    background-color: var(--uw-gold-light);
+  }
+  .has-uw-gold-dark-background-color {
+    background-color: var(--uw-gold-dark);
+  }
+  .has-uw-gold-bright-background-color {
+    background-color: var(--uw-gold-bright);
+  }
+  .has-uw-black-background-color {
+    background-color: var(--uw-black);
+  }
+
+  /* array(
+            'name' => __( 'Purple', 'asp' ),
+            'slug' => 'uw-purple',
+            'color' => '#4b2e83',
+        ),
+        array(
+            'name' => __( 'White', 'asp' ),
+            'slug' => 'uw-white',
+            'color' => '#fff',
+        ),
+        array(
+            'name' => __( 'Gray', 'asp' ),
+            'slug' => 'uw-gray',
+            'color' => '#c9c9c9',
+        ),
+        array(
+            'name' => __( 'Dark Gray', 'asp' ),
+            'slug' => 'uw-gray-dark',
+            'color' => '#5A5A5A',
+        ),
+        array(
+            'name' => __( 'Menu Gray', 'asp' ),
+            'slug' => 'uw-gray-menu',
+            'color' => '#707070',
+        ),
+        array(
+            'name' => __( 'Link Blue', 'asp' ),
+            'slug' => 'uw-link',
+            'color' => '#0074bb',
+        ),
+        array(
+            'name' => __( 'Gold', 'asp' ),
+            'slug' => 'uw-gold',
+            'color' => '#b7a57a',
+        ),
+        array(
+            'name' => __( 'Light Gold', 'asp' ),
+            'slug' => 'uw-gold-light',
+            'color' => '#e8e3d3',
+        ),
+        array(
+            'name' => __( 'Dark Gold', 'asp' ),
+            'slug' => 'uw-gold-dark',
+            'color' => '#85754d',
+        ),
+        array(
+            'name' => __( 'Bright Gold', 'asp' ),
+            'slug' => 'uw-gold-bright',
+            'color' => '#ffd800',
+        ),
+        array(
+            'name' => __( 'Black', 'asp' ),
+            'slug' => 'uw-black',
+            'color' => '#000000',
+        ), */

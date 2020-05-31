@@ -58,6 +58,11 @@ function asp_block_editor_settings() {
             'slug' => 'uw-gold-bright',
             'color' => '#ffd800',
         ),
+        array(
+            'name' => __( 'Black', 'asp' ),
+            'slug' => 'uw-black',
+            'color' => '#000000',
+        ),
     );
 
 	add_theme_support( 'editor-color-palette', $editor_color_palette );
