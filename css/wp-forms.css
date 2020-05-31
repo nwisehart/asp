@@ -2,24 +2,27 @@
  * Style over wp-forms styling
  */
 
-.wpforms-field-container .wpforms-field input {
+.wpforms-field-container .wpforms-field input,
+.wpforms-field-container .wpforms-field textarea {
     width: 100%;
     max-width: none;
-    background: var(--uw-gray);
+    background: #d9d9d9;
     border-radius: 0;
-    border: var(--uw-gray-menu) 1px solid;
+    border: var(--uw-gray) 1px solid;
 }
-.wpforms-field-container .wpforms-field input{
+.wpforms-field-container .wpforms-field input, 
+.wpforms-field-container .wpforms-field textarea {
     color: var(--uw-black);
     font-family: "Encode Sans Compressed";
     font-weight: 500;
 }
-.wpforms-field-container .wpforms-field input::placeholder {
+.wpforms-field-container .wpforms-field input::placeholder,
+.wpforms-field-container .wpforms-field textarea::placeholder {
     color: var(--uw-white);
     font-family: "Encode Sans Compressed";
     font-weight: 700;
 }
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit {
+.wpforms-container .wpforms-submit-container button.wpforms-submit {
     padding: 11px 40px 11px 20px;
     text-transform: uppercase;
     background-color: var(--uw-purple);
@@ -40,7 +43,7 @@
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:before {
+.wpforms-container .wpforms-submit-container button.wpforms-submit:before {
     content: "";
     width: 38px;
     right: -38px;
@@ -54,7 +57,7 @@
     -webkit-transition: all .1s ease-in;
     transition: all .1s ease-in;
 }
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:after {
+.wpforms-container .wpforms-submit-container button.wpforms-submit:after {
     content: "";
     position: absolute;
     top: 0;
@@ -71,13 +74,32 @@
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:hover,
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:focus,
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit.focus {
+.wpforms-container .wpforms-submit-container button.wpforms-submit:hover,
+.wpforms-container .wpforms-submit-container button.wpforms-submit:focus,
+.wpforms-container .wpforms-submit-container button.wpforms-submit.focus {
     color: var(--uw-gold);
 }
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:hover:before,
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit:focus:before,
-.wpforms-field-container .wpforms-submit-container button.wpforms-submit.focus:before {
+.wpforms-container .wpforms-submit-container button.wpforms-submit:hover:before,
+.wpforms-container .wpforms-submit-container button.wpforms-submit:focus:before,
+.wpforms-container .wpforms-submit-container button.wpforms-submit.focus:before {
     background-color: var(--uw-gold);
+}
+.wpforms-container .wpforms-title {
+    text-align: center;
+    color: var(--uw-purple);
+    text-transform: uppercase;
+    font-family: "Encode Sans Compressed";
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+.wpforms-container .wpforms-confirmation-container strong.ic-check {
+    text-transform: uppercase;
+    color: var(--uw-purple);
+}
+.wpforms-container .wpforms-confirmation-container strong.ic-check:before {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: -5px;
+    vertical-align: middle;
 }

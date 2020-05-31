@@ -61,3 +61,88 @@ a.uw-btn:focus:before,
 a.uw-btn.focus:before {
     background-color: var(--uw-gold);
 }
+
+/*
+ * Lightbox 
+ */
+ #aspLightboxContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    max-width: none;
+    z-index: 1;
+ }
+ #aspLightboxContainer .aspLightbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 95vw;
+    padding: 5rem 5rem 3rem 5rem;
+    background: white;
+    border: 1px solid var(--uw-gray-menu);
+ }
+ #aspLightboxClose {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-indent: -9999px;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    background: none;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+ }
+ #aspLightboxClose:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 9px);
+    right: calc(50% + 2px);
+    width: 18px;
+    height: 18px;
+    border: solid var(--uw-gray);
+    border-width: 0 2px 2px 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+ }
+ #aspLightboxClose:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 9px);
+    right: 4px;
+    width: 18px;
+    height: 18px;
+    border: solid var(--uw-gray);
+    border-width: 0 2px 2px 0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+ }
+ #aspLightboxClose:hover,
+ #aspLightboxClose:focus,
+ #aspLightboxClose.focus {
+     border: 1px solid var(--uw-gray);
+ }
+ #aspLightboxClose:hover:before,
+ #aspLightboxClose:focus:before,
+ #aspLightboxClose.focus:before,
+ #aspLightboxClose:hover:after,
+ #aspLightboxClose:focus:after,
+ #aspLightboxClose.focus:after {
+     border: solid var(--uw-gray-menu);
+     border-width: 0 2px 2px 0;
+ }
+ @media (max-width: 599px) {
+    #aspLightboxContainer .aspLightbox {
+        padding: 7rem 2rem 1rem;
+    }
+ }

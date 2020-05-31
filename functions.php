@@ -12,6 +12,7 @@ function asp_enqueue_parent_styles() {
 
 function asp_enqueue_scripts() {
    wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/header.js', array('jquery'), 1.1, true );
+   // wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/lightbox.js', array('jquery'), 1.1, true );
 }
 
 function register_callout_menu() {
