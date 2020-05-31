@@ -1,0 +1,83 @@
+/*
+ * Style over wp-forms styling
+ */
+
+.wpforms-field-container .wpforms-field input {
+    width: 100%;
+    max-width: none;
+    background: var(--uw-gray);
+    border-radius: 0;
+    border: var(--uw-gray-menu) 1px solid;
+}
+.wpforms-field-container .wpforms-field input{
+    color: var(--uw-black);
+    font-family: "Encode Sans Compressed";
+    font-weight: 500;
+}
+.wpforms-field-container .wpforms-field input::placeholder {
+    color: var(--uw-white);
+    font-family: "Encode Sans Compressed";
+    font-weight: 700;
+}
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit {
+    padding: 11px 40px 11px 20px;
+    text-transform: uppercase;
+    background-color: var(--uw-purple);
+    font-family: "Encode Sans Compressed",sans-serif;
+    font-weight: 800;
+    color: var(--uw-white);
+    display: inline-block;
+    position: relative;
+    background-image: none !important;
+    border-bottom: none;
+    text-decoration: none;
+    margin-right: 50px;
+    z-index: 1;
+    line-height: 24px;
+    font-size: 16px;
+    text-decoration: none !important;
+    border: 2px solid var(--uw-black);
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:before {
+    content: "";
+    width: 38px;
+    right: -38px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: var(--uw-white);
+    margin: -2px 0;
+    border: 2px solid var(--uw-black);
+    /* border-left: 1px solid var(--uw-black); */
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    height: 18px;
+    right: -23px;
+    top: 50%;
+    margin-top: -9px;
+    border: solid var(--uw-gray);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:hover,
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:focus,
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit.focus {
+    color: var(--uw-gold);
+}
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:hover:before,
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit:focus:before,
+.wpforms-field-container .wpforms-submit-container button.wpforms-submit.focus:before {
+    background-color: var(--uw-gold);
+}
