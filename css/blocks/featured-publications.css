@@ -44,3 +44,25 @@
 .asp-publication-content .asp-header a:hover {
     color: var(--uw-gold);
 }
+
+/**
+ * Mobile Styling
+ */
+
+ @media (max-width: 1000px) {
+    .asp-publication-container {
+        width: 100%;
+    }
+ }
+
+ @media (max-width: 599px) {
+     .asp-publication-container {
+        min-height: 125px;
+     }
+    .asp-publication-container img {
+        display: none;
+    }
+    .asp-publication-content {
+        padding: 0;
+    }
+ }
