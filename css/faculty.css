@@ -1,0 +1,63 @@
+/*
+ * Classes and overides for Faculty Pages
+ */
+
+/*
+ * Faculty info table
+ */
+.asp-faculty-info table {
+    border: 4px solid var(--uw-purple);
+    margin-top: 0;
+}
+.asp-faculty-info table th,
+.asp-faculty-info table td {
+    border: 3px solid var(--uw-purple);
+    color: var(--uw-purple);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.asp-faculty-info table td a {
+    color: var(--uw-purple);
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.asp-faculty-info table td a:hover,
+.asp-faculty-info table td a:focus,
+.asp-faculty-info table td a.focus {
+    color: var(--uw-gold);
+    text-decoration: underline;
+}
+@media (min-width: 782px) {
+    .wp-block-column .asp-faculty-info {
+        margin-right: 32px;
+    }
+}
+
+/*
+ * Faculty publications list
+ */
+.featured-publications.publication-title-only {
+    margin-top: 0;
+    margin-left: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.featured-publications.publication-title-only .asp-publication-container {
+    padding: 2rem 0 1rem 0;
+    width: 100%;
+}
+.featured-publications.publication-title-only a.asp-publication-list-item {
+    color: var(--uw-purple);
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+.featured-publications.publication-title-only a.asp-publication-list-item:hover, 
+.featured-publications.publication-title-only a.asp-publication-list-item:focus, 
+.featured-publications.publication-title-only a.asp-publication-list-item.focus {
+    color: var(--uw-gold);
+    text-decoration: underline;
+}
