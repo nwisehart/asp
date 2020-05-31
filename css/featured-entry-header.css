@@ -50,15 +50,23 @@ header.asp-cover-hero > .wp-block-cover {
 
 #aspMasthead h1.entry-title {
     width: auto;
-    position: absolute;
-    bottom: 5rem;
-    right: 7rem;
     display: inline-block;
     padding: 2rem 3rem;
     border: var(--uw-white) 3px solid;
     background: rgba(40,40,40,0.6);
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+#aspMasthead.asp-featured-image h1.entry-title {
+    position: absolute;
+    bottom: 5rem;
+    right: 7rem;
+}
+
+#aspMasthead:not(.asp-featured-image) h1.entry-title {
+    color: var(--uw-white);
+    position: relative;
 }
 
 #aspMasthead h1.entry-title:before {
@@ -70,6 +78,11 @@ header.asp-cover-hero > .wp-block-cover {
     top: -6px;
     left: -3px;
     background-color: var(--uw-white);
+}
+
+#aspMasthead:not(.asp-featured-image) {
+    border-bottom: 2px solid var(--uw-black);
+    background-color: var(--uw-gray-menu);
 }
 
 @media (max-width: 1000px) {
