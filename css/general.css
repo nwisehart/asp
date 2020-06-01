@@ -361,6 +361,14 @@ html {
     color: #3D3D3D;
     -webkit-font-smoothing: antialiased;
   }
+  .entry-content p,
+  .entry-content p.has-larger-font-size,
+  .entry-content p.has-large-font-size,
+  .entry-content p.has-normal-font-size,
+  .entry-content p.has-small-font-size {
+    font-size: 17px;
+  }
+  
 
   .entry-content h1,
   .entry-content .h1 {
