@@ -4,10 +4,11 @@
  $showSearch = $showAll && $search;
  $addClass = $showAll ? "show-all-publication-data" : "publication-title-only";
  $header = block_field( 'header' , false );
+ $tagLabel = block_field( 'tag-label' , false );
  $args = array( 
      'post_type' => array( 'asp_publications' ), 
      'posts_per_page' => block_field( 'number-of-posts' , false ), 
-     'category_name' => block_field( 'tag-label' , false )
+     'category_name' => $tagLabel
     );
 $ID = "";
 if ($showSearch) {
@@ -17,6 +18,7 @@ if ($showSearch) {
     );
     $ID = "aspSearchItemContainer";
 }
+if ( !empty($tagLabel) ) {
  $query = new WP_Query( $args );
      if ( $query->have_posts() ) { ?>
         <div class="wp-block-group alignwide featured-publications <?php echo $addClass; ?>" id="<?php echo $ID; ?>"><?php
@@ -66,5 +68,6 @@ if ($showSearch) {
      <?php
      }
 wp_reset_postdata();
+}
 
 ?>
