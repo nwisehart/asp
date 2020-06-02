@@ -1,0 +1,129 @@
+.featured-publications {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    /* flex-flow: column wrap; */
+    align-content: stretch;
+}
+
+.asp-publication-container {
+    /* display: flex; */
+    display: none;
+    width: 50%;
+    padding: 2rem;
+    max-height: 190px;
+}
+
+.asp-publication-container.show {
+    display: flex !important;
+}
+
+.asp-publication-container.priority-1 {
+    order: 5;
+}
+.asp-publication-container.priority-2 {
+    order: 4;
+}
+.asp-publication-container.priority-3 {
+    order: 3;
+}
+.asp-publication-container.priority-4 {
+    order: 2;
+}
+.asp-publication-container.priority-5 {
+    order: 1;
+}
+
+.asp-publication-container img {
+    height: 100%;
+    align-self: center;
+}
+
+.asp-publication-content {
+    padding-left: 2rem;
+    overflow: hidden;
+}
+
+.asp-publication-content .asp-header {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.asp-publication-content .asp-header a {
+    max-width: 100%;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: var(--uw-purple);
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+}
+
+.asp-publication-content .asp-header a:hover {
+    color: var(--uw-gold);
+}
+
+/**
+ * Search Bar
+ */
+.asp-search-container {
+    width: 100%;
+    box-shadow: 0px 2.5px var(--uw-gray);
+}
+.asp-search-container > span {
+    position: relative;
+}
+.asp-search-container > span:before {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    color: var(--uw-gray-menu);
+    font-size: 40px;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%); /* IE9+ */
+        transform: translate(0, -50%);
+}
+.asp-search-container input {
+    display: inline-block;
+    text-align: left;
+    border: none;
+    min-width: 230px;
+    width: auto;
+    height: 70px;
+    margin: 0 auto;
+}
+.asp-search-container input:hover,
+.asp-search-container input:focus,
+.asp-search-container input.focus {
+    outline: transparent;
+}
+.asp-search-container input::placeholder {
+    text-transform: uppercase;
+    color: var(--uw-gray);
+}
+
+
+/**
+ * Mobile Styling
+ */
+
+ @media (max-width: 1000px) {
+    .asp-publication-container {
+        width: 100%;
+    }
+ }
+
+ @media (max-width: 599px) {
+     .asp-publication-container {
+        min-height: 125px;
+     }
+    .asp-publication-container img {
+        display: none;
+    }
+    .asp-publication-content {
+        padding: 0;
+    }
+ }

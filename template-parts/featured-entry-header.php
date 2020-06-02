@@ -87,22 +87,19 @@ if ( $image_url ) {
 			} else {
 				$intro_text_width = ' thin';
 			}
-
-			if ( has_excerpt() && is_singular() ) {
-				?>
-
-				<div class="intro-text section-inner max-percentage<?php echo $intro_text_width; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
-					<?php the_excerpt(); ?>
-				</div>
-
-				<?php
-			}
-
-			// Default to displaying the post meta.
-			twentytwenty_the_post_meta( get_the_ID(), 'single-top' );
 			?>
 
 		</div><!-- .entry-header-inner -->
 	</div><!-- cover classes -->
-
+		<?php
+		if ( has_excerpt() && is_singular() ) {
+			?>
+			<div class="asp-excerpt-container">
+				<div class="intro-text section-inner max-percentage<?php echo $intro_text_width; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
+					<?php the_excerpt(); ?>
+				</div>
+		</div>
+			<?php
+		}
+		?>
 </header><!-- .entry-header -->

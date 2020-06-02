@@ -13,7 +13,7 @@ function asp_custom_post_type() {
                 'singular_name' => __('Publication', 'textdomain'),
             ),
             'public'      => true,
-            'has_archive' => true,
+            // 'has_archive' => true,
             'rewrite'     => array( 'slug' => 'publications' ),
             'publicly_queryable' => true,
             'exclude_from_search' => false,

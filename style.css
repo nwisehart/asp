@@ -30,10 +30,10 @@ Text Domain: asp
 @import "./css/faculty.css";
 
 /* Custom Blocks */
-@import "./css/blocks/asp-header.css";
-@import "./css/blocks/asp-widget.css";
-@import "./css/blocks/asp-button.css";
-@import "./css/blocks/featured-publications.css";
+@import "./blocks/css/asp-header.css";
+@import "./blocks/css/asp-widget.css";
+@import "./blocks/css/asp-button.css";
+@import "./blocks/css/featured-publications.css";
 
 /* Custom Post Types */
 @import "./css/post-types/publication.css";
