@@ -131,14 +131,32 @@
 
 								<?php
 								if ( has_nav_menu( 'callout-menu' ) ) {
-
-									wp_nav_menu(
-										array(
-											'container'  => '',
-											'items_wrap' => '%3$s',
-											'theme_location' => 'callout-menu',
-										)
-									);
+									if (is_front_page()) {
+										wp_nav_menu(
+											array(
+												'container'  => '',
+												'items_wrap' => '%3$s',
+												'theme_location' => 'callout-menu',
+											)
+										);
+									} else {
+										$itemWrap = "" .
+										'<li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
+											'<a href="_blank">Reports</a>' .
+											'<span class="icon"></span>' .
+											'<ul class="sub-menu">' .
+												'%3$s' .
+											'</ul>' .
+											'</li>';
+										wp_nav_menu(
+											array(
+												'container'  => '',
+												'items_wrap' => $itemWrap,
+												'theme_location' => 'callout-menu'
+											)
+										);
+										
+									}
 
 								} 
 								?>

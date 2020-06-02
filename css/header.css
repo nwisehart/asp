@@ -322,8 +322,12 @@ ul.asp-callout-menu.is-front-page > li > a {
     color: var(--uw-white);
     line-height: 2.5;
 }
-
-
+ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children:hover > ul,
+ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children:focus > ul,
+ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children.focus > ul {
+    right: auto;
+    left: 0;
+}
 
 /**
  * Mobile Styling
