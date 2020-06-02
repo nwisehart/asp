@@ -266,7 +266,7 @@ body:not(.overlay-header) .primary-menu > li > ul:after {
     text-decoration: none;
 }
 
-.primary-menu ul > li {
+.primary-menu ul > li:not(:last-child) {
     border-bottom: var(--uw-gray-menu) 1px solid;
 }
 
