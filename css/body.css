@@ -141,6 +141,10 @@ body:not(.singular) main > article:first-of-type.has-post-thumbnail {
         padding-top: 8rem;
     }
 
+    .entry-content >*.asp-after-search:not(.wp-block-cover):first-child {
+        padding-top: 4rem;
+    }
+
     body:not(.singular) main > article:first-of-type.has-post-thumbnail {
         padding-top: 0;
     }

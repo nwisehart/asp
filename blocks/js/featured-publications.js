@@ -4,12 +4,14 @@ $( document ).ready(function() {
     var searchInput = $('#aspSearchInput');
     var itemContainer = $('#aspSearchItemContainer');
     
-    
     // move search under header
     searchContainer.appendTo( $('#aspMasthead') );
 
     // remove hide id
     searchContainer.removeClass('hide');
+
+    // add class to first header
+    $('.entry-content > *:not(.wp-block-cover):first-child').addClass("asp-after-search");
 
     // filter to featured on start
     itemContainer.children().filter(
@@ -36,10 +38,11 @@ $( document ).ready(function() {
     // Pass true to show all items
     // Pass false to hide all items (Default)
     function resetItems(show = false) {
+        var classes = ['show', 'priority-1', 'priority-2', 'priority-3', 'priority-4', 'priority-5'];
         if (show) {
             itemContainer.children().addClass('show');
         } else {
-            itemContainer.children().removeClass('show');
+            itemContainer.children().removeClass(classes);
         }
     }
 
