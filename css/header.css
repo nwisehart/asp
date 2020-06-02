@@ -262,7 +262,7 @@ body:not(.overlay-header) .primary-menu > li > ul:after {
 .primary-menu ul > li:hover > a,
 .primary-menu ul > li:focus > a,
 .primary-menu ul > li.focus > a {
-    color: var(--uw-gray-dark);
+    color: var(--uw-purple);
     text-decoration: none;
 }
 
@@ -270,11 +270,11 @@ body:not(.overlay-header) .primary-menu > li > ul:after {
     border-bottom: var(--uw-gray-menu) 1px solid;
 }
 
-.primary-menu ul > li:hover ,
+/* .primary-menu ul > li:hover ,
 .primary-menu ul > li:focus ,
 .primary-menu ul > li.focus  {
     border-bottom: var(--uw-gray-dark) 2px solid;
-}
+} */
 
 ul.asp-callout-menu {
     justify-content: flex-start;
