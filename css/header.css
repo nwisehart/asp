@@ -333,6 +333,16 @@ ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children.focus > ul {
  * Mobile Styling
  */
 
+@media (max-width: 1200px) {
+    .primary-menu li a {
+        letter-spacing: 0px;
+        font-size: 14px;
+    }
+    .primary-menu > li:not(:first-child) {
+        margin: 0 0 0 4rem;
+    }
+}
+
 @media (max-width: 1000px) {
     
     .header-inner .header-titles-wrapper {
