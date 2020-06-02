@@ -2,7 +2,7 @@
     $shortcode = block_field( 'shortcode' , false );
     $hasShortcode = !empty( $shortcode );
     $addId = $hasShortcode ? "aspTriggerLightbox" : "";
-    $center = block_field( 'align-center' , false ) ? "has-text-align-center" : "";
+    $center = block_field( 'align-center' , false ) === "true" ? "has-text-align-center" : "";
 ?>
 <p class="<?php echo $center; ?>"><a id="<?php echo $addId; ?>" class="uw-btn btn-none <?php block_field('className'); ?>" href="<?php block_field( 'link' ); ?>"><?php block_field( 'link-text' ); ?></a></p>
 <?php
