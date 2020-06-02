@@ -13,7 +13,7 @@ if ( is_singular() ) {
 $meta_value = ! post_password_required() ? get_post_meta(get_the_ID(), 'featured_video_uploading', true) : '';
 $video_url = $meta_value ? wp_get_attachment_url($meta_value) : '';
 if ( $video_url ) {
-    $entry_header_classes .= ' asp-featured-video';
+    $entry_header_classes .= ' asp-featured-video asp-featured-image';
 } 
 
 // grabs featured image
