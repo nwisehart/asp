@@ -472,13 +472,13 @@ html {
   /*
    * hr tag
    */
-  .entry-content h2.wp-block-seperator {
+  .entry-content hr.wp-block-separator {
     background: currentColor;
     background-color: currentColor !important;
+    height: 2px;
   }
-  .entry-content h2.wp-block-seperator:before,
-  .entry-content h2.wp-block-seperator:after {
+  .entry-content hr.wp-block-separator::before,
+  .entry-content hr.wp-block-separator::after {
     content: none;
   }
-
   

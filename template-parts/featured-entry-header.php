@@ -28,7 +28,7 @@ $cover_inner_classes = '';
 $cover_video_html = '';
 
 if ( $video_url || $image_url ) {
-	$cover_classes .= "wp-block-cover alignfull has-background-dim";
+	$cover_classes .= "wp-block-cover alignfull";
 	$cover_inner_classes .= "wp-block-cover__inner-container";
 	$entry_header_classes .= ' asp-cover-hero';
 }
