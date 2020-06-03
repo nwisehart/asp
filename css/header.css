@@ -288,6 +288,10 @@ ul.asp-callout-menu.is-front-page {
     background: rgba(40,40,40,0.6);
     border: var(--asp-callout-color) 2px solid;
     padding: 0.5rem 2rem;
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display:flex;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -313,6 +317,7 @@ ul.asp-callout-menu.is-front-page > li:not(:first-child):before {
     left: 0;
     right: 0;
     -webkit-transform: none;
+    -moz-transform: none;
     -ms-transform: none;
     transform: none;
     background-color: var(--uw-white);
