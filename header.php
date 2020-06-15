@@ -90,7 +90,7 @@
                     </div><!-- .row-wrapper -->
 				</div><!-- .header-titles-wrapper -->
 
-				<div class="header-navigation-wrapper row<?php echo is_front_page() ? " is-front-page" : "" ?>">
+				<div class="header-navigation-wrapper row<?php echo (is_front_page() && has_nav_menu( 'callout-mobile-menu' )) ? " is-front-page" : "" ?>">
                     <div class="row-wrapper">
 
 					<?php
@@ -140,23 +140,43 @@
 											)
 										);
 									} 
-										$itemWrap = "" .
-										'<li id="menu-item-221" class="reports-dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
-											'<a href="_blank">Reports</a>' .
-											'<span class="icon"></span>' .
-											'<ul class="sub-menu">' .
-												'%3$s' .
-											'</ul>' .
-											'</li>';
+									$itemWrap = '' .
+												'<li id="menu-item-221" class="reports-dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
+												'<a href="#" style="pointer-events: none;">Reports</a>' .
+												'<span class="icon"></span>' .
+												'<ul class="sub-menu">' .
+													'%3$s' .
+												'</ul>' .
+												'</li>';
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => $itemWrap,
+											'theme_location' => 'callout-menu',
+										)
+									);	
+									if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ 'callout-mobile-menu' ] ) ) {
+										$mobile_callout_menu = wp_get_nav_menu_object( $locations[ 'callout-mobile-menu' ] );
+										$itemWrap = '%3$s';
+										if ($mobile_callout_menu->count > 1) {
+											$itemWrap = '' .
+												'<li id="menu-item-221" class="reports-dropdown callout-mobile-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
+												'<a href="#" style="pointer-events: none;">Reports</a>' .
+												'<span class="icon"></span>' .
+												'<ul class="sub-menu">' .
+													'%3$s' .
+												'</ul>' .
+												'</li>';
+										}
 										wp_nav_menu(
 											array(
 												'container'  => '',
 												'items_wrap' => $itemWrap,
-												'theme_location' => 'callout-menu'
+												'theme_location' => 'callout-mobile-menu',
+												'menu_class' => 'reports-dropdown'
 											)
-										);
-										
-									
+										);	
+									}
 
 								} 
 								?>

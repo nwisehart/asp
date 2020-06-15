@@ -3,6 +3,8 @@ add_action( 'wp_enqueue_scripts', 'asp_enqueue_parent_styles' );
 add_action( 'wp_enqueue_scripts', 'asp_enqueue_scripts' );
 add_action( 'wp_enqueue_scripts', 'asp_enqueue_block_scripts' );
 add_action( 'init', 'register_callout_menu' );
+add_action( 'init', 'register_callout_mobile_menu' );
+add_filter('nav_menu_css_class', 'callout_mobile_menu_classes', 1, 3);
 add_action( 'init', 'asp_theme_support', 11 );
 add_action( 'wp_print_styles', 'asp_remove_inline_styles' );
 add_action( 'widgets_init', 'asp_sidebar_registration' );
@@ -19,6 +21,17 @@ function asp_enqueue_scripts() {
 function register_callout_menu() {
    register_nav_menu('callout-menu',__( 'Callout Menu' ));
 }
+
+function register_callout_mobile_menu() {
+   register_nav_menu('callout-mobile-menu',__( 'Mobile Callout Menu' ));
+}
+
+function callout_mobile_menu_classes($classes, $item, $args) {
+   if($args->theme_location == 'callout-mobile-menu') {
+     $classes[] = 'callout-mobile-menu-item reports-dropdown';
+   }
+   return $classes;
+ }
 
 function asp_theme_support() {
    unregister_nav_menu( 'expanded' );

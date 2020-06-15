@@ -91,7 +91,7 @@ header.asp-cover-hero > .wp-block-cover {
         display: none;
     }
 
-    .singular header.asp-cover-hero:not(.is-front-page) {
+    .singular header.entry-header:not(.is-front-page) {
         border-top: 5px solid white;
     }
 

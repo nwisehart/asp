@@ -281,6 +281,10 @@ ul.asp-callout-menu {
     margin: 0 auto 0 0;
 }
 
+ul.asp-callout-menu:not(.is-front-page) > li.callout-mobile-menu-item {
+    display: none;
+}
+
 @media (min-width: 1000px) {
 
     ul.asp-callout-menu.is-front-page {
@@ -305,7 +309,8 @@ ul.asp-callout-menu {
         line-height: 2.5;
     }
 
-    ul.asp-callout-menu.is-front-page > li.reports-dropdown {
+    ul.asp-callout-menu.is-front-page > li.reports-dropdown,
+    ul.asp-callout-menu.is-front-page > li.callout-mobile-menu-item {
         display: none;
     }
 }
@@ -433,7 +438,9 @@ ul.asp-callout-menu > li.menu-item-has-children.focus > ul {
     }
 
     ul.asp-callout-menu.is-front-page > li:not(.reports-dropdown),
-    ul.asp-callout-menu.is-front-page > li:not(.reports-dropdown):before {
+    ul.asp-callout-menu.is-front-page > li:not(.reports-dropdown):before,
+    ul.asp-callout-menu.is-front-page > li:not(.callout-mobile-menu-item),
+    ul.asp-callout-menu.is-front-page > li:not(.callout-mobile-menu-item):before {
         display: none;
     }
 

@@ -42,7 +42,7 @@ if ( $image_url ) {
 	$cover_styles .= "background-image:url(" . $image_url . ")";
 }
 
-if( is_front_page() ) {
+if( is_front_page() && has_nav_menu( 'callout-mobile-menu' ) ) {
 	$entry_header_classes .= ' is-front-page';
 }
 
