@@ -90,7 +90,7 @@
                     </div><!-- .row-wrapper -->
 				</div><!-- .header-titles-wrapper -->
 
-				<div class="header-navigation-wrapper row">
+				<div class="header-navigation-wrapper row<?php echo is_front_page() ? " is-front-page" : "" ?>">
                     <div class="row-wrapper">
 
 					<?php
@@ -139,9 +139,9 @@
 												'theme_location' => 'callout-menu',
 											)
 										);
-									} else {
+									} 
 										$itemWrap = "" .
-										'<li id="menu-item-221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
+										'<li id="menu-item-221" class="reports-dropdown menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-221">' .
 											'<a href="_blank">Reports</a>' .
 											'<span class="icon"></span>' .
 											'<ul class="sub-menu">' .
@@ -156,7 +156,7 @@
 											)
 										);
 										
-									}
+									
 
 								} 
 								?>

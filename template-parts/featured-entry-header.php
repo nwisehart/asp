@@ -42,6 +42,10 @@ if ( $image_url ) {
 	$cover_styles .= "background-image:url(" . $image_url . ")";
 }
 
+if( is_front_page() ) {
+	$entry_header_classes .= ' is-front-page';
+}
+
 ?>
 
 <header id="aspMasthead" class="entry-header has-text-align-center<?php echo esc_attr( $entry_header_classes ); ?>">

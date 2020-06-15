@@ -281,22 +281,33 @@ ul.asp-callout-menu {
     margin: 0 auto 0 0;
 }
 
-ul.asp-callout-menu.is-front-page {
-    position: absolute;
-    top: calc(var(--header-height) + 2rem);
-    left: 2rem;
-    background: rgba(40,40,40,0.6);
-    border: var(--asp-callout-color) 2px solid;
-    padding: 0.5rem 2rem;
-    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display:flex;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    height: auto;
+@media (min-width: 1000px) {
+
+    ul.asp-callout-menu.is-front-page {
+        position: absolute;
+        top: calc(var(--header-height) + 2rem);
+        left: 2rem;
+        background: rgba(40,40,40,0.6);
+        border: var(--asp-callout-color) 2px solid;
+        padding: 0.5rem 2rem;
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: auto;
+    }
+
+    ul.asp-callout-menu.is-front-page > li > a {
+        color: var(--uw-white);
+        line-height: 2.5;
+    }
+
+    ul.asp-callout-menu.is-front-page > li.reports-dropdown {
+        display: none;
+    }
 }
 
 ul.asp-callout-menu.is-front-page > li {
@@ -323,13 +334,16 @@ ul.asp-callout-menu.is-front-page > li:not(:first-child):before {
     background-color: var(--uw-white);
 }
 
-ul.asp-callout-menu.is-front-page > li > a {
-    color: var(--uw-white);
-    line-height: 2.5;
-}
-ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children:hover > ul,
+/* ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children:hover > ul,
 ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children:focus > ul,
 ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children.focus > ul {
+    right: auto;
+    left: 0;
+} */
+
+ul.asp-callout-menu > li.menu-item-has-children:hover > ul,
+ul.asp-callout-menu > li.menu-item-has-children:focus > ul,
+ul.asp-callout-menu > li.menu-item-has-children.focus > ul {
     right: auto;
     left: 0;
 }
@@ -350,7 +364,7 @@ ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children.focus > ul {
 
 @media (max-width: 1000px) {
     
-    .header-inner .header-titles-wrapper {
+    .header-inner > .row {
         padding: 0 2rem;
     }
 
@@ -405,4 +419,30 @@ ul.asp-callout-menu:not(.is-front-page) > li.menu-item-has-children.focus > ul {
     .mobile-menu .modal-menu a {
         color: var(--uw-gray-menu); 
     }
+
+    .header-navigation-wrapper.is-front-page {
+        display: flex;
+    }
+
+    button.toggle {
+        height: var(--header-mobile-nav-height);
+    }
+
+    ul.primary-menu:not(.asp-callout-menu) {
+        display: none;
+    }
+
+    ul.asp-callout-menu.is-front-page > li:not(.reports-dropdown),
+    ul.asp-callout-menu.is-front-page > li:not(.reports-dropdown):before {
+        display: none;
+    }
+
+    ul.asp-callout-menu > li.menu-item-has-children:hover > ul,
+    ul.asp-callout-menu > li.menu-item-has-children:focus > ul,
+    ul.asp-callout-menu > li.menu-item-has-children.focus > ul {
+        right: auto;
+        left: 0;
+    }
+
+
 }
